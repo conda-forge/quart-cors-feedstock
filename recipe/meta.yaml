@@ -1,6 +1,6 @@
 {% set name = "Quart-CORS" %}
-{% set version = "0.1.0" %}
-{% set sha256 = "8727d56c91c8056b605cfd63774c9953215d955604a2a59fa23d1187b3a8728f" %}
+{% set version = "0.1.2" %}
+{% set sha256 = "054a5c9dc5c6a44a11af20f803037f92515a8086f388fda0e9a7a9f6ee4f3b7b" %}
 
 package:
   name: {{ name|lower }}
