@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About quart-cors
 ================
 
@@ -20,8 +16,17 @@ Sharing, CORS (also known as access control).
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/quart-cors-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/quart-cors-feedstock)
+
+<table><tr>
+    
+    <td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3303&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/quart-cors-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
