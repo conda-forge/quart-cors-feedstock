@@ -31,9 +31,10 @@ test:
     - quart_cors
 
 about:
-  home: https://github.com/theelous3/asks
+  home: https://gitlab.com/pgjones/quart-cors
   license: MIT
   license_family: MIT
+  license_file: LICENSE
   summary: 'A Quart extension to provide Cross Origin Resource Sharing, access control, support.'
   description: |
     Quart-CORS is an extension for Quart to handle Cross Origin Resource
