@@ -1,6 +1,6 @@
 {% set name = "Quart-CORS" %}
-{% set version = "0.2.0" %}
-{% set sha256 = "3b9e7fee3b564249c9264677c45417f3cdba2531db3b3d2b2b863bde75a34297" %}
+{% set version = "0.4.0" %}
+{% set sha256 = "e526e9929934ad31301853efe357a3bd2e08c3282aff37184fa8671ed854f052" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -35,7 +35,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'A Quart extension to provide Cross Origin Resource Sharing, access control, support.'
+  summary: A Quart extension to provide Cross Origin Resource Sharing, access control, support.
   description: |
     Quart-CORS is an extension for Quart to handle Cross Origin Resource
     Sharing, CORS (also known as access control).
