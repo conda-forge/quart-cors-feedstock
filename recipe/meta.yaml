@@ -23,8 +23,8 @@ requirements:
     - setuptools >=40.6.2
 
   run:
-    - python >=3.6.1
-    - Quart >=0.6.0
+    - python >=3.7
+    - quart >=0.15.0
 
 test:
   imports:
