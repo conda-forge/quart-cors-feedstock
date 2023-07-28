@@ -1,46 +1,42 @@
-{% set name = "Quart-CORS" %}
-{% set version = "0.2.0" %}
-{% set sha256 = "3b9e7fee3b564249c9264677c45417f3cdba2531db3b3d2b2b863bde75a34297" %}
+{% set name = "quart-cors" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/quart_cors-{{ version }}.tar.gz
+  sha256: e7c3f176624cfaa934ea96eddbcaea0b6c225d8eee543f97bce3bdc22e1e00ef
 
 build:
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   host:
+    - python >=3.7
+    - poetry-core >=1.0.0
     - pip
-    - python >=3.6.1
-    - setuptools >=40.6.2
-
   run:
-    - python >=3.6.1
-    - Quart >=0.6.0
+    - python >=3.7
+    - quart >=0.15
+    - typing-extensions
 
 test:
   imports:
     - quart_cors
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
-  home: https://gitlab.com/pgjones/quart-cors
+  home: https://github.com/pgjones/quart-cors/
+  summary: A Quart extension to provide Cross Origin Resource Sharing, access control, support
   license: MIT
-  license_family: MIT
   license_file: LICENSE
-  summary: 'A Quart extension to provide Cross Origin Resource Sharing, access control, support.'
-  description: |
-    Quart-CORS is an extension for Quart to handle Cross Origin Resource
-    Sharing, CORS (also known as access control).
-  doc_url: https://gitlab.com/pgjones/quart-cors
-  dev_url: https://gitlab.com/pgjones/quart-cors
 
 extra:
   recipe-maintainers:
