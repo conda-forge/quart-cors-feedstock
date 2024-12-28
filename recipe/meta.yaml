@@ -1,13 +1,13 @@
 {% set name = "quart-cors" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/quart_cors-{{ version }}.tar.gz
-  sha256: d667a0f13b4ce6d9e926489de5d819780844fbff5b2cdea156bd8867dd426a37
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/quart_cors-{{ version }}.tar.gz
+  sha256: ac32c4931da6fba944e9e2d3f856f2db4fd82e3fb905a09646086780c221a118
 
 build:
   noarch: python
