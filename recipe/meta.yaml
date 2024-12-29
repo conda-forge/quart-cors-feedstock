@@ -16,14 +16,13 @@ build:
 
 requirements:
   host:
-    - python >=3.7
-    - poetry-core >=1.0.0
+    - python {{ python_min }}
+    - pdm-backend
     - pip
   run:
-    - typing_extensions *
-    - python >=3.7
+    - python >={{ python_min }}
     - quart >=0.15
-    - typing-extensions
+    - typing_extensions *
 
 test:
   imports:
@@ -31,6 +30,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
